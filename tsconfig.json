@@ -3,7 +3,8 @@
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
     /* Basic Options */
-    // "incremental": true,                   /* Enable incremental compilation */
+    // "incremental": true,  
+    "noImplicitAny":false,                 /* Enable incremental compilation */
     "target": "ES6",
     "module": "commonjs",
     "outDir": "./dist",
