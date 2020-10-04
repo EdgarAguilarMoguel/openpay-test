@@ -2,11 +2,13 @@ import express, {Application, Request, Response, NextFunction} from 'express';
 // const express = require('express');
 // import Openpay = require("openpay");
 import config from './config'
+import bodyParser from 'body-parser';
 
 const app: Application = express();
 
 // import posts = require('./routes/api/posts'); //Change to TS syntax
-
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: true}))
 app.use('/api/posts', require('./routes/api/posts'));
 
 // const openpay = new Openpay(' your merchant id ', ' your private key ');

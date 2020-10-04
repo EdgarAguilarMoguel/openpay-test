@@ -3,9 +3,16 @@ import {IClient} from '../interfaces/IClient'
 
 
 const Client = new Schema({ 
-  _id: Schema.Types.ObjectId,
-  name: String, 
-  email: String,
+  name: {
+    type: String,
+    required: [true, 'Please enter a full name'],
+    index: true,
+  }, 
+  email: {
+    type: String,
+    required: [true, 'Please enter an email'],
+    index: true,
+  },
   last_name: String,
   address: {
     city: String,
