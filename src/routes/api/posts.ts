@@ -1,4 +1,5 @@
 import express, { Request, Response, Router} from 'express';
+import config from '../../config';
 import mongoose from 'mongoose';
 
 
@@ -8,7 +9,7 @@ router.get('/', (req: Request, res: Response) => {
   res.send("Pago exitoso.");
 });
 
-mongoose.connect('', {useNewUrlParser: true});
+mongoose.connect(config.host, {useNewUrlParser: true});
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));

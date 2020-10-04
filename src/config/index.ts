@@ -1,3 +1,7 @@
+require('dotenv').config()
+
+
 export default {
-  port: 3000
+  port: process.env.PORT,
+  host: process.env.DB_HOST
 }
