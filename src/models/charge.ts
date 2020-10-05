@@ -8,7 +8,7 @@ const Charge = new Schema({
   amount: Number,
   currency: String,
   description: String,
-  order_id: String
+  device_session_id: String,
 });
 
 module.exports = mongoose.model<ICharge & mongoose.Document>('Charge', Charge);

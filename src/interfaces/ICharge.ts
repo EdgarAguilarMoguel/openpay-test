@@ -4,5 +4,5 @@ export interface ICharge {
   amount: Number;
   currency: String;
   description: String;
-  order_id: String;
+  device_session_id: String;
 }
